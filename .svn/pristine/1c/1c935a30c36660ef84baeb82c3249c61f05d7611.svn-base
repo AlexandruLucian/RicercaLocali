@@ -1,0 +1,23 @@
+<%@ page import="java.sql.*" %>
+<%@ page import="java.math.*" %>
+<%@ page import="it.edenred.mybatis.*" %>
+<%@ page import="java.io.BufferedReader" %>
+<%@ page import="java.io.FileReader" %>
+
+<html>
+<head>
+<title>Test</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<jsp:forward page="affiliati.jsp"/>
+
+	<form name="form_affiliati" action="affiliati.jsp" method="get">
+		<input type="text" id="localita" name="localita"/>
+		<input type="submit" value="Cerca"/>
+	</form>
+	
+	<div id="risultati"></div>
+</body>
+</html>

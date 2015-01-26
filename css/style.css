@@ -1,0 +1,26 @@
+
+body { 
+	background-image: url(../images/crossword.png) ;
+}
+.tabel {
+	margin: 50px;
+	border-collapse: collapse;
+	border: solid 1px black;
+	font-size: 14px;
+}
+
+.tabel th {
+	background-color: #79A0FF;
+	border: solid 1px blue;
+	padding: 8px 20px;
+	color: white;	
+}
+
+.tabel td {
+	border: solid 1px black;
+	padding: 8px;
+}
+
+.griggio {
+	background-color: #eee;
+}

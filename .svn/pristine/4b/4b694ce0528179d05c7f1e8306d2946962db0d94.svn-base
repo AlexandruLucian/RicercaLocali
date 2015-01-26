@@ -1,0 +1,9 @@
+package it.edenred.mybatis;
+import it.edenred.bean.Affiliato;
+import it.edenred.bean.Menu;
+
+public interface EdenredMapper {
+	 Menu getMenu(String menuCd);
+	 Affiliato[] getAffiliati(String localita);
+
+}

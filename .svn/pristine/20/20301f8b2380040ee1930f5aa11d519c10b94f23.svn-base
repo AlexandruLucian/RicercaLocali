@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="it.edenred.mybatis.EdenredMapper">
+    <select id="getAffiliati" parameterType="String" resultMap="affiliatoResultMap">
+        SELECT
+           COD_AFFILIATO,
+           INDIRIZZO_LOCALE,
+           NOME_LOCALE,
+           TELEFONO
+        FROM R_DIM_ANAGRAFICA_AFFILIATI 
+        WHERE LOCALITA_SOCIETA = #{localita}
+    </select>
+    
+    <resultMap id="affiliatoResultMap" type="it.edenred.bean.Affiliato">
+        <result column="COD_AFFILIATO" property="codAffiliato"/>
+        <result column="INDIRIZZO_LOCALE" property="indirizzoLocale"/>
+        <result column="NOME_LOCALE" property="nomeLocale"/>
+        <result column="TELEFONO" property="telefono"/>
+    </resultMap>
+ 
+    <select id="getMenu" parameterType="String" resultMap="menuResultMap">
+        SELECT
+           CIRC_CD,
+           MENU_CD,
+           MENU_DE
+        FROM R_CIRC_MENU
+        WHERE MENU_CD = #{menuCd}
+    </select>
+    
+    <resultMap id="menuResultMap" type="it.edenred.bean.Menu">
+        <result column="CIRC_CD" property="circCd"/>
+        <result column="MENU_CD" property="menuCd"/>
+        <result column="MENU_DE" property="menuDe"/>
+    </resultMap>
+ 
+</mapper>

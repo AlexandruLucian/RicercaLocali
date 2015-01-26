@@ -1,0 +1,41 @@
+package it.edenred.bean;
+
+public class Affiliato {
+
+	private String codAffiliato;
+	private String indirizzoLocale;
+	private String nomeLocale;
+	private String telefono;
+	
+	public String getCodAffiliato() {
+		return codAffiliato;
+	}
+	
+	public void setCodAffiliato(String codAffiliato) {
+		this.codAffiliato = codAffiliato;
+	}
+	
+	public String getIndirizzoLocale() {
+		return indirizzoLocale;
+	}
+	
+	public void setIndirizzoLocale(String indirizzoLocale) {
+		this.indirizzoLocale = indirizzoLocale;
+	}
+	
+	public String getNomeLocale() {
+		return nomeLocale;
+	}
+	
+	public void setNomeLocale(String nomeLocale) {
+		this.nomeLocale = nomeLocale;
+	}
+	
+	public String getTelefono() {
+		return telefono;
+	}
+	
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+}

@@ -1,0 +1,34 @@
+<%@ page import="it.edenred.mybatis.*" %>
+<%@ page import="it.edenred.bean.*" %>
+
+<html>
+<head>
+<title>Test</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<a href="javascript:history.go(-1)">&lt;&lt; Indietro</a>
+	<% String localita = (String) request.getParameter("localita");
+	Affiliato[] affiliati = EdenredClient.getAffiliati(localita);	
+	%>
+	<br><br>
+	Risultati per <%=localita%>: 
+	<table class="tabel">
+		<tr>
+			<th>Cod. affiliato</th>
+			<th>Nome locale</th>
+			<th>Indirizzo</th>
+			<th>Telefono</th>		
+		</tr>			
+		<% for (Affiliato affiliato:affiliati) { %>
+				<tr>
+					<td align="center"><%=affiliato.getCodAffiliato() %></td>
+					<td align="center"><%=affiliato.getNomeLocale() %></td>
+					<td align="center"><%=affiliato.getIndirizzoLocale() %></td>
+					<td align="center"><%=affiliato.getTelefono()==null? "":affiliato.getTelefono()%></td>				
+				</tr>
+	     <% } %>
+	</table>	
+</body>
+</html>
